@@ -8,23 +8,23 @@ inquirer
   .prompt([
     {
       type: "input",
-      message: "What is your user name?",
+      message: "What's your username?",
       name: "username"
     },
     {
       type: "password",
-      message: "What is your password?",
+      message: "What's your password?",
       name: "password"
     },
     {
       type: "password",
-      message: "Re-enter password to confirm:",
+      message: "Re-enter your password to verify match:",
       name: "confirm"
     }
   ])
   .then(function(data) {
     if (data.password !== data.confirm){ // checking if both entered passwords are same if not reenter all the information
-      console.log("Passwords do not match, Please re-enter your information");
+      console.log("Passwords do not match, Please re-enter your details");
       userQuestions ();
     }else{
       var fs = require("fs");
