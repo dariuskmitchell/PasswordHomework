@@ -24,7 +24,7 @@ inquirer
   ])
   .then(function(data) {
     if (data.password !== data.confirm){ // checking if both entered passwords are same if not reenter all the information
-      console.log("Passwords do not match, Please re-enter your details");
+      console.log("The passwords do not match. Please Try again");
       userQuestions ();
     }else{
       var fs = require("fs");
